@@ -55,6 +55,126 @@ document.addEventListener('DOMContentLoaded', function() {
 
     patchGsapStepSync();
     document.addEventListener('scroll', syncProgressDots, true);
+
+    // GSAP + ScrollTrigger Animations for Behave Landing Page
+
+    // 1. Hero Section Animation
+    gsap.timeline()
+        .from('section.gradient-bg h1', {opacity: 0, y: 40, duration: 0.7})
+        .from('section.gradient-bg p', {opacity: 0, y: 30, duration: 0.6}, '-=0.4')
+        .from('section.gradient-bg .flex > button', {opacity: 0, y: 20, stagger: 0.15, duration: 0.5}, '-=0.3')
+        .from('section.gradient-bg iframe', {opacity: 0, scale: 0.96, duration: 0.7}, '-=0.3');
+
+    // 2. How It Works Section Animation
+    const steps = document.querySelectorAll('#how-it-works-scroll .how-step');
+    const dots = document.querySelectorAll('#how-it-works-scroll .progress-dot');
+
+    steps.forEach((step, i) => {
+        gsap.from(step, {
+            scrollTrigger: {
+                trigger: step,
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+            opacity: 0,
+            x: -40,
+            duration: 0.7,
+            ease: 'power2.out',
+            onStart: () => setActiveStep(i),
+            onReverseComplete: () => setActiveStep(i - 1),
+        });
+    });
+
+    // Sticky mockup fade-in
+    if (window.innerWidth >= 768) {
+        gsap.from('.sticky-mockup', {
+            scrollTrigger: {
+                trigger: '#how-it-works-scroll',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            ease: 'power2.out',
+        });
+    }
+
+    // Progress dot state logic
+    function setActiveStep(activeIdx) {
+        dots.forEach((dot, idx) => {
+            if (idx < activeIdx) {
+                dot.classList.add('bg-[#D0D3D4]');
+                dot.classList.remove('bg-[#212322]');
+                dot.classList.remove('border-[#212322]');
+            } else if (idx === activeIdx) {
+                dot.classList.add('bg-[#212322]');
+                dot.classList.remove('bg-[#D0D3D4]');
+                dot.classList.remove('border-[#212322]');
+            } else {
+                dot.classList.remove('bg-[#212322]', 'bg-[#D0D3D4]');
+                dot.classList.add('border-[#212322]');
+            }
+        });
+    }
+
+    // 3. Product Logic Visual Animation
+    gsap.from('.bg-\[\#B76CA4\], .bg-\[\#FED1BD\], .bg-\[\#CE785D\], .bg-\[\#212322\]', {
+        scrollTrigger: {
+            trigger: '.bg-\[\#B76CA4\]',
+            start: 'top 80%',
+        },
+        opacity: 0,
+        y: 40,
+        stagger: 0.2,
+        duration: 0.7,
+        ease: 'power2.out',
+    });
+
+    // 4. Testimonials Animation
+    gsap.from('section.bg-white blockquote', {
+        scrollTrigger: {
+            trigger: 'section.bg-white blockquote',
+            start: 'top 85%',
+        },
+        opacity: 0,
+        y: 40,
+        duration: 0.7,
+        ease: 'power2.out',
+    });
+    gsap.from('section.bg-white .flex.flex-wrap', {
+        scrollTrigger: {
+            trigger: 'section.bg-white .flex.flex-wrap',
+            start: 'top 90%',
+        },
+        opacity: 0,
+        y: 30,
+        duration: 0.6,
+        ease: 'power2.out',
+    });
+
+    // 5. CTA Animation
+    gsap.from('section.bg-\[\#F3F4F5\] h2', {
+        scrollTrigger: {
+            trigger: 'section.bg-\[\#F3F4F5\] h2',
+            start: 'top 90%',
+        },
+        opacity: 0,
+        y: 40,
+        duration: 0.7,
+        ease: 'power2.out',
+    });
+    gsap.from('section.bg-\[\#F3F4F5\] button', {
+        scrollTrigger: {
+            trigger: 'section.bg-\[\#F3F4F5\] button',
+            start: 'top 95%',
+        },
+        opacity: 0,
+        y: 20,
+        stagger: 0.15,
+        duration: 0.5,
+        ease: 'power2.out',
+    });
 });
 
 function activateHowItWorksSteps() {

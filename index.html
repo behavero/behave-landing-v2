@@ -3,142 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Behave - Social Currency Platform</title>
+    <title>Behave – Turn Content into Currency</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="bg-white text-gray-900">
-    <header class="w-full bg-white sticky top-0 z-30 shadow-sm">
-        <div class="container mx-auto px-4 py-4 flex items-center">
-            <a href="#" class="flex items-center">
-                <img src="behave-logo.png" alt="Behave Logo" class="h-10 w-auto">
-            </a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-center px-4 py-24">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Unlock Lifestyle.<br>Powered by Content.</h1>
-        <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">Behave turns content into access — creators earn experiences, businesses get real visibility.</p>
-        <a href="https://lbgb4x6bo6z.typeform.com/to/WwKoYjN5" target="_blank" rel="noopener" class="btn-primary text-lg px-10 py-4 mb-12">Join the waiting list</a>
-        <div class="w-full flex justify-center">
-            <iframe src="https://dev.thisisfruit.com/behave/card/" class="w-full max-w-2xl h-[400px] md:h-[500px] rounded-2xl shadow-lg border-0"></iframe>
-        </div>
-    </section>
-
-    <!-- Scroll-Activated How It Works Section -->
-    <section id="how-it-works-scroll" class="w-full bg-white py-20 px-4">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-start gap-8 md:gap-16">
-            <!-- Progress dots and steps -->
-            <div class="flex flex-row w-full md:w-2/3">
-                <div class="progress-line flex flex-col items-center justify-between mr-4 md:mr-8 pt-2">
-                    <div class="progress-dot" data-dot="1"></div>
-                    <div class="progress-dot" data-dot="2"></div>
-                    <div class="progress-dot" data-dot="3"></div>
-                    <div class="progress-dot" data-dot="4"></div>
-                </div>
-                <div class="flex flex-col gap-6 w-full">
-                    <div class="how-step opacity-40" data-step="1">
-                        <div class="step-label">STEP 1</div>
-                        <div class="step-title">List</div>
-                        <div class="step-desc">Create a Drop. Choose the experience, content format, and how many creators you want. No contracts. No hassle.</div>
-                    </div>
-                    <div class="how-step opacity-40" data-step="2">
-                        <div class="step-label">STEP 2</div>
-                        <div class="step-title">Connect</div>
-                        <div class="step-desc">Behave matches your venue with relevant creators. You approve who comes, or let the platform auto-match.</div>
-                    </div>
-                    <div class="how-step opacity-40" data-step="3">
-                        <div class="step-label">STEP 3</div>
-                        <div class="step-title">Deliver</div>
-                        <div class="step-desc">The creator visits your venue, enjoys the experience, and shares authentic content tagging your venue.</div>
-                    </div>
-                    <div class="how-step opacity-40" data-step="4">
-                        <div class="step-label">STEP 4</div>
-                        <div class="step-title">Grow</div>
-                        <div class="step-desc">We verify the content, and pay you. You get exposure, track ROI, and can reinvest into new Drops.</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Right: Sticky Smartphone Mockup -->
-            <div class="flex-1 flex justify-center items-start w-full md:sticky md:top-32 mt-8 md:mt-0">
-                <img src="behave-ui-mockup.png" alt="Behave UI Preview" class="rounded-2xl shadow-lg w-full max-w-xs md:max-w-sm sticky-mockup" />
-            </div>
-        </div>
-    </section>
-
-    <!-- Backed by Vision -->
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Why Behave?</h2>
-            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-4">100+</div>
-                    <p class="text-gray-600">Active Creators</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-4">50+</div>
-                    <p class="text-gray-600">Partner Businesses</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-4">10k+</div>
-                    <p class="text-gray-600">Monthly Engagements</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-center mb-12">As Seen On</h2>
-            <div class="flex flex-wrap justify-center items-center gap-12">
-                <a href="https://www.crunchbase.com/organization/behave-ro" target="_blank" class="opacity-60 hover:opacity-100 transition-opacity flex items-center gap-2">
-                    <img src="crunchbase-logo.svg" alt="Crunchbase" class="h-8 w-auto">
-                    <span class="text-lg font-medium">Crunchbase</span>
-                </a>
-                <a href="https://www.f6s.com/behave.ro" target="_blank" class="opacity-60 hover:opacity-100 transition-opacity flex items-center gap-2">
-                    <img src="F6S-Logo.png" alt="F6S" class="h-8 w-auto">
-                    <span class="text-lg font-medium">F6S</span>
-                </a>
-                <a href="https://www.producthunt.com/posts/behave-3" target="_blank" class="opacity-60 hover:opacity-100 transition-opacity flex items-center gap-2">
-                    <img src="producthunt-logo.png" alt="Product Hunt" class="h-8 w-auto">
-                    <span class="text-lg font-medium">Product Hunt</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Join the Movement CTA -->
-    <section class="py-24 bg-white text-center">
-        <h2 class="text-3xl font-bold mb-8">Creators and businesses shaping the future of local influence.</h2>
-        <a href="https://lbgb4x6bo6z.typeform.com/to/WwKoYjN5" target="_blank" rel="noopener" class="btn-primary text-lg px-10 py-4">Join the waiting list</a>
-    </section>
-
-    <footer class="w-full bg-deepblue text-white py-10 mt-0">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
-            <!-- Left: Language selector -->
-            <div class="flex items-center gap-2 text-sm mb-4 md:mb-0">
-                <span class="material-icons" style="font-size: 1.2em; vertical-align: middle;">language</span>
-                English
-            </div>
-            <!-- Center: Links -->
-            <div class="flex flex-wrap gap-6 justify-center text-sm mb-4 md:mb-0">
-                <a href="#" class="footer-link">Cookie Settings</a>
-                <a href="#" class="footer-link">Privacy Policy</a>
-                <a href="#" class="footer-link">Report abuse</a>
-            </div>
-            <!-- Right: Copyright and logo -->
-            <div class="flex items-center gap-2 text-sm">
-                <span>&copy; Behave S.R.L - 2024</span>
-                <img src="behave-logo.png" alt="Behave Logo" class="h-6 w-auto ml-2">
-            </div>
-        </div>
-    </footer>
-    <script src="script.js"></script>
-    <!-- GSAP and ScrollTrigger CDN -->
+    <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #F3F4F5 0%, #D2C4D6 100%);
+        }
+        .sticky-mockup {
+            position: sticky;
+            top: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#212322] font-sans">
+    <main>
+        <!-- Hero Section -->
+        <section class="gradient-bg min-h-screen flex flex-col justify-center items-center text-center px-4 py-24 md:py-32 relative overflow-hidden">
+            <div class="max-w-3xl mx-auto z-10">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">Turn Content into Currency.</h1>
+                <p class="text-lg md:text-2xl mb-8 font-medium">Behave empowers creators to unlock real experiences and gives local brands measurable visibility.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+                    <button class="btn-primary px-8 py-3 rounded-full text-lg font-bold shadow-lg transition-transform hover:scale-105" onclick="openTypeform('creator')">Join Creator Waitlist</button>
+                    <button class="btn-secondary px-8 py-3 rounded-full text-lg font-bold shadow-lg transition-transform hover:scale-105" onclick="openTypeform('brand')">Join Brand Waitlist</button>
+                </div>
+                <!-- 3D Card Viewer Embed -->
+                <div class="w-full max-w-xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                    <iframe src="https://dev.thisisfruit.com/behave/card/" class="w-full h-[400px] md:h-[500px]" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- Optional: Soft ambient video background (commented out) -->
+            <!-- <video class="absolute inset-0 w-full h-full object-cover opacity-20 z-0" autoplay loop muted playsinline src="/assets/ambient.mp4"></video> -->
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works-scroll" class="relative py-24 md:py-32 bg-white">
+            <div class="container mx-auto flex flex-col md:flex-row gap-12 items-start">
+                <!-- Steps -->
+                <div class="flex-1 flex flex-col gap-12">
+                    <div class="how-step flex items-start gap-6" data-step="1">
+                        <div class="progress-dot w-6 h-6 rounded-full border-2 border-[#212322] flex-shrink-0 mt-2"></div>
+                        <div>
+                            <div class="step-label text-sm uppercase tracking-widest font-semibold mb-1">Step 1</div>
+                            <div class="step-title text-2xl font-bold mb-2">List an Experience</div>
+                            <div class="step-desc text-base">Brands offer a coffee, facial, etc. and set quantity.</div>
+                        </div>
+                    </div>
+                    <div class="how-step flex items-start gap-6" data-step="2">
+                        <div class="progress-dot w-6 h-6 rounded-full border-2 border-[#212322] flex-shrink-0 mt-2"></div>
+                        <div>
+                            <div class="step-label text-sm uppercase tracking-widest font-semibold mb-1">Step 2</div>
+                            <div class="step-title text-2xl font-bold mb-2">Get Content</div>
+                            <div class="step-desc text-base">Verified creators apply and show up at the venue.</div>
+                        </div>
+                    </div>
+                    <div class="how-step flex items-start gap-6" data-step="3">
+                        <div class="progress-dot w-6 h-6 rounded-full border-2 border-[#212322] flex-shrink-0 mt-2"></div>
+                        <div>
+                            <div class="step-label text-sm uppercase tracking-widest font-semibold mb-1">Step 3</div>
+                            <div class="step-title text-2xl font-bold mb-2">Creators Post</div>
+                            <div class="step-desc text-base">They share authentic content and tag your brand.</div>
+                        </div>
+                    </div>
+                    <div class="how-step flex items-start gap-6" data-step="4">
+                        <div class="progress-dot w-6 h-6 rounded-full border-2 border-[#212322] flex-shrink-0 mt-2"></div>
+                        <div>
+                            <div class="step-label text-sm uppercase tracking-widest font-semibold mb-1">Step 4</div>
+                            <div class="step-title text-2xl font-bold mb-2">You Get Paid</div>
+                            <div class="step-desc text-base">Content is verified → money is deducted from wallet → Behave takes 20% → you receive the rest.</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sticky Image Mockup -->
+                <div class="flex-1 hidden md:block">
+                    <div class="sticky-mockup rounded-3xl shadow-2xl overflow-hidden border border-gray-200 bg-white">
+                        <!-- Replace with your mockup image -->
+                        <img src="/assets/mockup-phone.png" alt="App Mockup" class="w-full h-auto" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Logic Visual -->
+        <section class="py-24 md:py-32 bg-[#F3F4F5]">
+            <div class="container mx-auto flex flex-col items-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">How Value Flows</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 w-full justify-center">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center">
+                        <!-- Replace with custom icon -->
+                        <div class="w-14 h-14 bg-[#B76CA4] rounded-full flex items-center justify-center mb-2">
+                            <span class="material-icons text-white text-3xl">account_balance_wallet</span>
+                        </div>
+                        <div class="font-semibold">Brand tops up wallet</div>
+                    </div>
+                    <span class="hidden md:block text-3xl text-[#D0D3D4]">→</span>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 bg-[#FED1BD] rounded-full flex items-center justify-center mb-2">
+                            <span class="material-icons text-[#212322] text-3xl">star</span>
+                        </div>
+                        <div class="font-semibold">Creator earns on booking</div>
+                    </div>
+                    <span class="hidden md:block text-3xl text-[#D0D3D4]">→</span>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 bg-[#CE785D] rounded-full flex items-center justify-center mb-2">
+                            <span class="material-icons text-white text-3xl">local_cafe</span>
+                        </div>
+                        <div class="font-semibold">Creator visits & pays via Behave</div>
+                    </div>
+                    <span class="hidden md:block text-3xl text-[#D0D3D4]">→</span>
+                    <!-- Step 4 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 bg-[#212322] rounded-full flex items-center justify-center mb-2">
+                            <span class="material-icons text-white text-3xl">payments</span>
+                        </div>
+                        <div class="font-semibold">Brand receives payout minus 20% fee</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials / Social Proof -->
+        <section class="py-24 md:py-32 bg-white">
+            <div class="container mx-auto flex flex-col items-center">
+                <blockquote class="text-2xl md:text-3xl font-semibold italic text-center max-w-2xl mb-10">"Behave has redefined how we engage with creators — simple, premium, trackable."<br><span class="block text-lg font-normal mt-4">– Local Café Owner, Cluj</span></blockquote>
+                <div class="flex flex-wrap gap-8 justify-center items-center">
+                    <!-- Replace with actual logo images and links -->
+                    <a href="https://www.crunchbase.com/organization/behave" target="_blank" rel="noopener" class="block"><img src="/assets/crunchbase-badge.svg" alt="Crunchbase" class="h-10" /></a>
+                    <a href="https://www.f6s.com/behave" target="_blank" rel="noopener" class="block"><img src="/assets/f6s-badge.svg" alt="F6S" class="h-10" /></a>
+                    <a href="https://www.producthunt.com/products/behave" target="_blank" rel="noopener" class="block"><img src="/assets/producthunt-badge.svg" alt="Product Hunt" class="h-10" /></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-24 md:py-32 bg-[#F3F4F5] text-center">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold mb-8">Join the Social Currency movement.</h2>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="btn-primary px-8 py-3 rounded-full text-lg font-bold shadow-lg transition-transform hover:scale-105" onclick="openTypeform('creator')">Join Creator Waitlist</button>
+                    <button class="btn-secondary px-8 py-3 rounded-full text-lg font-bold shadow-lg transition-transform hover:scale-105" onclick="openTypeform('brand')">Join Brand Waitlist</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal/Typeform Placeholder -->
+    <div id="typeform-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-lg w-full relative">
+            <button onclick="closeTypeform()" class="absolute top-4 right-4 text-2xl text-gray-400 hover:text-black">&times;</button>
+            <!-- Replace with Typeform embed or form -->
+            <div id="typeform-content" class="w-full h-96 flex items-center justify-center text-lg text-gray-700">
+                Typeform or signup form goes here.
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP Animations -->
+    <script src="script.js"></script>
+    <script>
+        // Modal logic
+        function openTypeform(type) {
+            document.getElementById('typeform-modal').classList.remove('hidden');
+            document.getElementById('typeform-content').innerHTML = `Loading ${type} waitlist form...`;
+            // TODO: Replace with actual Typeform embed logic
+        }
+        function closeTypeform() {
+            document.getElementById('typeform-modal').classList.add('hidden');
+        }
+    </script>
+    <!-- Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </body>
 </html> 
