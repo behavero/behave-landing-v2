@@ -47,6 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll-activated How It Works section
     activateHowItWorksSteps();
     window.addEventListener('resize', activateHowItWorksSteps);
+
+    // GSAP ScrollTrigger for How It Works section
+    gsapHowItWorksScroll();
+    setTimeout(gsapHowItWorksScroll, 300); // Wait for GSAP to load
+    window.addEventListener('resize', gsapHowItWorksScroll);
 });
 
 function activateHowItWorksSteps() {
@@ -78,4 +83,67 @@ function activateHowItWorksSteps() {
         threshold: [0.5]
     });
     steps.forEach(step => observer.observe(step));
+}
+
+// GSAP ScrollTrigger for How It Works section
+function gsapHowItWorksScroll() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    const section = document.querySelector('#how-it-works-scroll');
+    const steps = gsap.utils.toArray('#how-it-works-scroll .how-step');
+    if (!section || steps.length === 0) return;
+
+    // Reset any previous triggers
+    ScrollTrigger.getAll().forEach(t => t.kill());
+    gsap.set(steps, { opacity: 0.4, scale: 0.98 });
+
+    // Pin the section and animate steps
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: `+=${steps.length * 100}%`,
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+        }
+    })
+    .to(steps, {
+        opacity: 1,
+        scale: 1.04,
+        stagger: 1 / steps.length,
+        duration: 0.5,
+        ease: 'power1.inOut',
+    })
+    .to(steps, {
+        opacity: (i, target, targets) => i < targets.length - 1 ? 0.6 : 1,
+        scale: (i, target, targets) => i < targets.length - 1 ? 0.99 : 1.04,
+        stagger: 1 / steps.length,
+        duration: 0.5,
+        ease: 'power1.inOut',
+    }, ">-0.5");
+
+    // Animate each step individually for scroll up/down
+    steps.forEach((step, i) => {
+        ScrollTrigger.create({
+            trigger: step,
+            start: () => `top+=${i * window.innerHeight * 0.5} center`,
+            end: () => `top+=${(i + 1) * window.innerHeight * 0.5} center`,
+            onEnter: () => {
+                steps.forEach((s, idx) => {
+                    s.classList.remove('active', 'past');
+                    if (idx < i) s.classList.add('past');
+                });
+                step.classList.add('active');
+            },
+            onEnterBack: () => {
+                steps.forEach((s, idx) => {
+                    s.classList.remove('active', 'past');
+                    if (idx < i) s.classList.add('past');
+                });
+                step.classList.add('active');
+            },
+            onLeave: () => step.classList.remove('active'),
+            onLeaveBack: () => step.classList.remove('active'),
+        });
+    });
 } 
