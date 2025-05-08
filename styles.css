@@ -3,6 +3,13 @@
     --behave-white: #F3F4F5;
     --behave-grey: #D0D3D4;
     --behave-black: #212322;
+    --behave-peach: #FED1BD;
+    --behave-brown: #CE785D;
+    --behave-tan: #C08A80;
+    --behave-purple: #B76CA4;
+    --behave-lavender: #D2C4D6;
+    --behave-blue: #8896C6;
+    --behave-deepblue: #464B65;
 }
 
 body {
@@ -35,14 +42,53 @@ section {
     background: none;
 }
 
-/* Custom Button Styles */
+/* Typeform-Inspired Button Styles */
 .btn-primary {
-    @apply inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-lg;
+    background: var(--behave-black);
+    color: var(--behave-white);
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 9999px;
+    padding: 0.75rem 2.5rem;
+    box-shadow: 0 2px 8px 0 rgba(33,35,34,0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    border: none;
+    outline: none;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background: var(--behave-deepblue);
+    color: var(--behave-white);
+    box-shadow: 0 4px 16px 0 rgba(33,35,34,0.12);
 }
 
 .btn-secondary {
-    @apply inline-block px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold transition-all duration-300 hover:bg-blue-50 hover:shadow-lg;
+    background: var(--behave-grey);
+    color: var(--behave-black);
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 9999px;
+    padding: 0.75rem 2.5rem;
+    box-shadow: 0 2px 8px 0 rgba(33,35,34,0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    border: none;
+    outline: none;
 }
+.btn-secondary:hover, .btn-secondary:focus {
+    background: var(--behave-peach);
+    color: var(--behave-black);
+    box-shadow: 0 4px 16px 0 rgba(33,35,34,0.12);
+}
+
+/* Accent backgrounds for cards/icons (optional usage) */
+.bg-peach { background: var(--behave-peach) !important; }
+.bg-brown { background: var(--behave-brown) !important; }
+.bg-tan { background: var(--behave-tan) !important; }
+.bg-purple { background: var(--behave-purple) !important; }
+.bg-lavender { background: var(--behave-lavender) !important; }
+.bg-blue { background: var(--behave-blue) !important; }
+.bg-deepblue { background: var(--behave-deepblue) !important; }
 
 /* Smooth Scrolling */
 html {
@@ -88,25 +134,69 @@ section {
 
 /* Form Input Styles */
 input[type="email"] {
-    @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--behave-grey);
+    color: var(--behave-black);
+    background: var(--behave-white);
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+input[type="email"]:focus {
+    border: 1.5px solid var(--behave-deepblue);
+    box-shadow: 0 0 0 2px var(--behave-blue);
 }
 
 /* Logo Hover Effects */
 .logo-hover {
-    @apply transition-opacity duration-300 hover:opacity-100;
+    transition: opacity 0.3s;
+}
+.logo-hover:hover {
+    opacity: 1 !important;
 }
 
 /* Mobile Optimizations */
 @media (max-width: 768px) {
     .container {
-        @apply px-4;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-    
     h1 {
-        @apply text-4xl;
+        font-size: 2.25rem;
     }
-    
     .btn-primary, .btn-secondary {
-        @apply w-full text-center;
+        width: 100%;
+        text-align: center;
     }
+}
+
+/* Footer Link Styles */
+.footer-link {
+    color: var(--behave-white);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+.footer-link:hover, .footer-link:focus {
+    color: var(--behave-peach);
+    border-bottom: 1px solid var(--behave-peach);
+}
+
+/* Material Icons Support */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.material-icons {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
 } 
