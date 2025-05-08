@@ -199,4 +199,40 @@ input[type="email"]:focus {
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll-Activated How It Works Section */
+#how-it-works-scroll {
+    background: var(--behave-white);
+}
+#how-it-works-scroll .how-step {
+    opacity: 0.4;
+    transform: scale(0.98);
+    transition: opacity 0.5s, transform 0.5s;
+}
+#how-it-works-scroll .how-step.active {
+    opacity: 1;
+    transform: scale(1.04);
+    z-index: 2;
+}
+#how-it-works-scroll .how-step.past {
+    opacity: 0.6;
+    transform: scale(0.99);
+}
+#how-it-works-scroll .step-title {
+    letter-spacing: 0.04em;
+}
+.sticky-mockup {
+    position: sticky;
+    top: 6rem;
+}
+@media (max-width: 768px) {
+    #how-it-works-scroll .how-step {
+        opacity: 1 !important;
+        transform: scale(1) !important;
+    }
+    .sticky-mockup {
+        position: static;
+        margin-top: 2rem;
+    }
 } 

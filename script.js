@@ -43,4 +43,39 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => {
         observer.observe(section);
     });
-}); 
+
+    // Scroll-activated How It Works section
+    activateHowItWorksSteps();
+    window.addEventListener('resize', activateHowItWorksSteps);
+});
+
+function activateHowItWorksSteps() {
+    const steps = document.querySelectorAll('#how-it-works-scroll .how-step');
+    if (!steps.length) return;
+    if (window.innerWidth <= 768) {
+        steps.forEach(step => {
+            step.classList.add('active');
+            step.classList.remove('past');
+        });
+        return;
+    }
+    let lastActive = -1;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const idx = Array.from(steps).indexOf(entry.target);
+            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                steps.forEach((s, i) => {
+                    s.classList.remove('active', 'past');
+                    if (i < idx) s.classList.add('past');
+                });
+                entry.target.classList.add('active');
+                lastActive = idx;
+            } else if (!entry.isIntersecting && lastActive >= 0) {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, {
+        threshold: [0.5]
+    });
+    steps.forEach(step => observer.observe(step));
+} 
