@@ -1,0 +1,75 @@
+/* Custom Button Styles */
+.btn-primary {
+    @apply inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-lg;
+}
+
+.btn-secondary {
+    @apply inline-block px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold transition-all duration-300 hover:bg-blue-50 hover:shadow-lg;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Responsive iframe container */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom Section Spacing */
+section {
+    scroll-margin-top: 2rem;
+}
+
+/* Form Input Styles */
+input[type="email"] {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Logo Hover Effects */
+.logo-hover {
+    @apply transition-opacity duration-300 hover:opacity-100;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .container {
+        @apply px-4;
+    }
+    
+    h1 {
+        @apply text-4xl;
+    }
+    
+    .btn-primary, .btn-secondary {
+        @apply w-full text-center;
+    }
+} 
