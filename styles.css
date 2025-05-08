@@ -201,13 +201,47 @@ input[type="email"]:focus {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Scroll-Activated How It Works Section */
+/* Improved How It Works Section */
 #how-it-works-scroll {
-    background: var(--behave-white);
+    background: var(--behave-black);
+}
+#how-it-works-scroll h2 {
+    color: var(--behave-white);
+    letter-spacing: 0.12em;
+}
+#how-it-works-scroll .step-label {
+    color: var(--behave-white);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+#how-it-works-scroll .step-title-outline {
+    font-size: 3rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--behave-white);
+    text-stroke: 2px var(--behave-white);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    text-align: left;
+}
+#how-it-works-scroll .how-step.active .step-title-outline {
+    color: var(--behave-white);
+    -webkit-text-stroke: 0px;
+    text-stroke: 0px;
+}
+#how-it-works-scroll .step-desc {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    max-width: 32rem;
+    text-align: left;
 }
 #how-it-works-scroll .how-step {
-    opacity: 0.4;
-    transform: scale(0.98);
+    margin-bottom: 2.5rem;
     transition: opacity 0.5s, transform 0.5s;
 }
 #how-it-works-scroll .how-step.active {
@@ -219,20 +253,84 @@ input[type="email"]:focus {
     opacity: 0.6;
     transform: scale(0.99);
 }
-#how-it-works-scroll .step-title {
-    letter-spacing: 0.04em;
+#how-it-works-scroll .how-step:not(.active) .step-title-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--behave-white);
+    text-stroke: 2px var(--behave-white);
 }
-.sticky-mockup {
-    position: sticky;
-    top: 6rem;
+.progress-line {
+    width: 32px;
+    min-width: 32px;
+    height: 100%;
+    position: relative;
+    margin-left: 2rem;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.progress-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: transparent;
+    margin: 32px 0;
+    transition: background 0.3s, border 0.3s;
+    box-shadow: 0 2px 8px 0 rgba(33,35,34,0.08);
+}
+.progress-dot.active {
+    background: var(--behave-white);
+    border: 2px solid var(--behave-purple);
+}
+.progress-dot.past {
+    background: var(--behave-grey);
+    border: 2px solid var(--behave-grey);
+}
+@media (max-width: 900px) {
+    #how-it-works-scroll .step-title-outline {
+        font-size: 2.1rem;
+    }
+    .progress-line {
+        width: 20px;
+        min-width: 20px;
+    }
+    .progress-dot {
+        width: 14px;
+        height: 14px;
+        margin: 18px 0;
+    }
 }
 @media (max-width: 768px) {
-    #how-it-works-scroll .how-step {
-        opacity: 1 !important;
-        transform: scale(1) !important;
+    #how-it-works-scroll {
+        padding: 2rem 0.5rem;
     }
-    .sticky-mockup {
-        position: static;
-        margin-top: 2rem;
+    #how-it-works-scroll h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    #how-it-works-scroll .step-title-outline {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+    #how-it-works-scroll .step-label {
+        font-size: 1rem;
+        text-align: left;
+    }
+    #how-it-works-scroll .step-desc {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+    .progress-line {
+        width: 12px;
+        min-width: 12px;
+        margin-left: 0.5rem;
+    }
+    .progress-dot {
+        width: 10px;
+        height: 10px;
+        margin: 10px 0;
     }
 } 

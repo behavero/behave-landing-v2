@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
     gsapHowItWorksScroll();
     setTimeout(gsapHowItWorksScroll, 300); // Wait for GSAP to load
     window.addEventListener('resize', gsapHowItWorksScroll);
+
+    patchGsapStepSync();
+    document.addEventListener('scroll', syncProgressDots, true);
 });
 
 function activateHowItWorksSteps() {
@@ -146,4 +149,29 @@ function gsapHowItWorksScroll() {
             onLeaveBack: () => step.classList.remove('active'),
         });
     });
+}
+
+// Animate progress dots in sync with steps
+function syncProgressDots() {
+    const steps = document.querySelectorAll('#how-it-works-scroll .how-step');
+    const dots = document.querySelectorAll('#how-it-works-scroll .progress-dot');
+    let activeIdx = -1;
+    steps.forEach((step, i) => {
+        if (step.classList.contains('active')) activeIdx = i;
+    });
+    dots.forEach((dot, i) => {
+        dot.classList.remove('active', 'past');
+        if (i === activeIdx) dot.classList.add('active');
+        else if (i < activeIdx) dot.classList.add('past');
+    });
+}
+
+// Patch GSAP triggers to sync dots
+function patchGsapStepSync() {
+    const steps = document.querySelectorAll('#how-it-works-scroll .how-step');
+    steps.forEach(step => {
+        const observer = new MutationObserver(syncProgressDots);
+        observer.observe(step, { attributes: true, attributeFilter: ['class'] });
+    });
+    syncProgressDots();
 } 
