@@ -1,3 +1,40 @@
+/* Custom Color Palette */
+:root {
+    --behave-white: #F3F4F5;
+    --behave-grey: #D0D3D4;
+    --behave-black: #212322;
+}
+
+body {
+    background: var(--behave-white);
+    color: var(--behave-black);
+}
+
+.bg-white, .bg-gray-50 {
+    background-color: var(--behave-white) !important;
+}
+
+.bg-gray-50 {
+    background-color: var(--behave-grey) !important;
+}
+
+.bg-gray-900, .text-white {
+    background-color: var(--behave-black) !important;
+    color: var(--behave-white) !important;
+}
+
+.text-gray-900, .text-gray-600, .text-gray-700, .text-black {
+    color: var(--behave-black) !important;
+}
+
+.border-t {
+    border-top-color: var(--behave-grey) !important;
+}
+
+section {
+    background: none;
+}
+
 /* Custom Button Styles */
 .btn-primary {
     @apply inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-lg;

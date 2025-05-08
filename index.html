@@ -9,142 +9,118 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-white text-gray-900">
+    <header class="w-full bg-white sticky top-0 z-30 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex items-center">
+            <a href="#" class="flex items-center">
+                <img src="behave-logo.png" alt="Behave Logo" class="h-10 w-auto">
+            </a>
+        </div>
+    </header>
+
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div class="container mx-auto px-4 py-16 flex flex-col lg:flex-row items-center">
-            <div class="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
-                <h1 class="text-5xl lg:text-6xl font-bold mb-6">
-                    Unlock Lifestyle.<br>Powered by Content.
-                </h1>
-                <p class="text-xl lg:text-2xl text-gray-600 mb-8">
-                    Behave turns content into access — creators earn perks, brands get real visibility.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#creator-waitlist" class="btn-primary">Join Creator Waitlist</a>
-                    <a href="#brand-waitlist" class="btn-secondary">Join Brand Waitlist</a>
-                </div>
-            </div>
-            <div class="lg:w-1/2">
-                <iframe src="https://dev.thisisfruit.com/behave/card/" class="w-full h-[500px] border-0"></iframe>
-            </div>
+    <section class="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-center px-4 py-24">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Unlock Lifestyle.<br>Powered by Content.</h1>
+        <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">Behave turns content into access — creators earn experiences, businesses get real visibility.</p>
+        <a href="https://lbgb4x6bo6z.typeform.com/to/WwKoYjN5" target="_blank" rel="noopener" class="btn-primary text-lg px-10 py-4 mb-12">Join the waiting list</a>
+        <div class="w-full flex justify-center">
+            <iframe src="https://dev.thisisfruit.com/behave/card/" class="w-full max-w-2xl h-[400px] md:h-[500px] rounded-2xl shadow-lg border-0"></iframe>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-24 bg-white">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
                 <!-- For Creators -->
-                <div class="bg-white p-8 rounded-xl shadow-sm">
+                <div class="bg-gray-50 rounded-2xl p-10 flex flex-col items-center text-center shadow-sm">
                     <div class="text-4xl mb-4 text-blue-600">
                         <i class="fas fa-camera"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">For Creators</h3>
-                    <ul class="space-y-3">
-                        <li>• Earn exclusive perks and experiences</li>
+                    <ul class="space-y-3 text-lg text-gray-700">
+                        <li>• Earn exclusive experiences</li>
                         <li>• Build authentic brand partnerships</li>
                         <li>• Grow your influence locally</li>
                     </ul>
                 </div>
-
-                <!-- For Brands -->
-                <div class="bg-white p-8 rounded-xl shadow-sm">
+                <!-- For Business -->
+                <div class="bg-gray-50 rounded-2xl p-10 flex flex-col items-center text-center shadow-sm">
                     <div class="text-4xl mb-4 text-green-600">
                         <i class="fas fa-store"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">For Brands</h3>
-                    <ul class="space-y-3">
+                    <h3 class="text-2xl font-bold mb-4">For Business</h3>
+                    <ul class="space-y-3 text-lg text-gray-700">
                         <li>• Connect with local influencers</li>
                         <li>• Get authentic brand visibility</li>
                         <li>• Track campaign performance</li>
                     </ul>
                 </div>
-
-                <!-- For Everyone -->
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-4xl mb-4 text-purple-600">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">For Everyone</h3>
-                    <ul class="space-y-3">
-                        <li>• Discover local experiences</li>
-                        <li>• Support authentic creators</li>
-                        <li>• Join a growing community</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#product" class="btn-primary">See the Product</a>
             </div>
         </div>
     </section>
 
     <!-- The Behave Flow -->
-    <section id="product" class="py-20">
+    <section class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Creator Flow -->
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-bold mb-6">Creator Flow</h3>
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center flex-shrink-0">1</div>
-                            <div>
-                                <h4 class="font-bold">Create Content</h4>
-                                <p class="text-gray-600">Share authentic experiences with your audience</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center flex-shrink-0">2</div>
-                            <div>
-                                <h4 class="font-bold">Earn Perks</h4>
-                                <p class="text-gray-600">Get exclusive access to local experiences</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center flex-shrink-0">3</div>
-                            <div>
-                                <h4 class="font-bold">Grow Influence</h4>
-                                <p class="text-gray-600">Build meaningful brand partnerships</p>
-                            </div>
+            <h2 class="text-3xl font-bold text-center mb-12">How Behave Works</h2>
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Creator Flow -->
+                <div class="flex flex-col gap-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold">1</div>
+                        <div>
+                            <h4 class="font-bold">Create Content</h4>
+                            <p class="text-gray-600">Share authentic experiences with your audience</p>
                         </div>
                     </div>
-
-                    <!-- Brand Flow -->
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-bold mb-6">Brand Flow</h3>
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center flex-shrink-0">1</div>
-                            <div>
-                                <h4 class="font-bold">List Perks</h4>
-                                <p class="text-gray-600">Offer exclusive experiences to creators</p>
-                            </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold">2</div>
+                        <div>
+                            <h4 class="font-bold">Earn Experiences</h4>
+                            <p class="text-gray-600">Get exclusive access to local experiences</p>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center flex-shrink-0">2</div>
-                            <div>
-                                <h4 class="font-bold">Get Visibility</h4>
-                                <p class="text-gray-600">Receive authentic content promotion</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center flex-shrink-0">3</div>
-                            <div>
-                                <h4 class="font-bold">Track Results</h4>
-                                <p class="text-gray-600">Monitor campaign performance</p>
-                            </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold">3</div>
+                        <div>
+                            <h4 class="font-bold">Grow Influence</h4>
+                            <p class="text-gray-600">Build meaningful brand partnerships</p>
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-12 p-4 bg-gray-50 rounded-lg">
-                    <p class="text-gray-600">Real-world perks. Verified posts. No cash upfront.</p>
+                <!-- Business Flow -->
+                <div class="flex flex-col gap-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center text-xl font-bold">1</div>
+                        <div>
+                            <h4 class="font-bold">List Experiences</h4>
+                            <p class="text-gray-600">Offer exclusive experiences to creators</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center text-xl font-bold">2</div>
+                        <div>
+                            <h4 class="font-bold">Get Visibility</h4>
+                            <p class="text-gray-600">Receive authentic content promotion</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center text-xl font-bold">3</div>
+                        <div>
+                            <h4 class="font-bold">Track Results</h4>
+                            <p class="text-gray-600">Monitor campaign performance</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="text-center mt-16 p-4 bg-white rounded-xl shadow-sm max-w-xl mx-auto">
+                <p class="text-gray-600">Real-world experiences. Verified posts. No cash upfront.</p>
             </div>
         </div>
     </section>
 
     <!-- Backed by Vision -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Why Behave?</h2>
             <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -154,7 +130,7 @@
                 </div>
                 <div class="text-center">
                     <div class="text-4xl font-bold text-blue-600 mb-4">50+</div>
-                    <p class="text-gray-600">Partner Brands</p>
+                    <p class="text-gray-600">Partner Businesses</p>
                 </div>
                 <div class="text-center">
                     <div class="text-4xl font-bold text-blue-600 mb-4">10k+</div>
@@ -165,7 +141,7 @@
     </section>
 
     <!-- Social Proof -->
-    <section class="py-20">
+    <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold text-center mb-12">As Seen On</h2>
             <div class="flex flex-wrap justify-center items-center gap-8">
@@ -185,23 +161,21 @@
         </div>
     </section>
 
-    <!-- Join the Movement -->
-    <section class="py-20 bg-gray-900 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8">Creators and brands shaping the future of local influence.</h2>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <a href="#creator-waitlist" class="btn-primary">Join Creator Waitlist</a>
-                <a href="#brand-waitlist" class="btn-secondary">Join Brand Waitlist</a>
-            </div>
-            <form class="max-w-md mx-auto">
-                <div class="flex gap-4">
-                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-lg text-gray-900">
-                    <button type="submit" class="btn-primary">Subscribe</button>
-                </div>
-            </form>
-        </div>
+    <!-- Join the Movement CTA -->
+    <section class="py-24 bg-white text-center">
+        <h2 class="text-3xl font-bold mb-8">Creators and businesses shaping the future of local influence.</h2>
+        <a href="https://lbgb4x6bo6z.typeform.com/to/WwKoYjN5" target="_blank" rel="noopener" class="btn-primary text-lg px-10 py-4">Join the waiting list</a>
     </section>
 
+    <footer class="w-full bg-gray-50 border-t mt-0 py-8">
+        <div class="container mx-auto px-4 flex flex-col items-center gap-4">
+            <img src="behave-logo.png" alt="Behave Logo" class="h-8 w-auto mb-2">
+            <div class="text-gray-500 text-sm text-center">
+                &copy; Behave S.R.L - 2024 | Strada Ferdinand 22-26, 3rd Floor, Cluj-Napoca 400110<br>
+                <a href="mailto:hello@behave.ro" class="underline hover:text-blue-600">hello@behave.ro</a>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html> 
